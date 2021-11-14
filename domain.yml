@@ -1,0 +1,77 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- affirm:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- deny:
+    use_entities: true
+- specific_recipe:
+    use_entities: true
+- greeting:
+    use_entities: true
+- help:
+    use_entities: true
+- more:
+    use_entities: true
+- meal_of_the_day:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- nevermind:
+    use_entities: true
+entities:
+- difficulty
+- sort
+- specification
+- meal
+- time
+- amount_ppl
+- cook
+- bake
+slots: {}
+responses:
+  utter_greet:
+  - text: Morgen du lusche
+  - text: Moin
+  - text: You idiot sandwich
+  - text: Pimmelgesicht
+  - text: Guten Tag
+  - text: Hallo
+  utter_goodbye:
+  - text: Cya later crocodile
+  - text: Bis später
+  - text: Bis bald
+  - text: Guten Apetit und bis bald
+  utter_cook:
+  - text: Was willst du heute kochen?
+  - text: Mit welchem Rezept kann ich dir behilflich sein?
+  utter_help:
+  - text: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH
+  - text: Ne ich brauche Hilfe
+  - text: Brauchen wir nicht alle Hilfe?
+  - text: Wenn du hilfe brauchst such nen Psychologen auf
+  - text: Du kannst mich nach einen bestimmten Rezept fragen und ich such dir eins. Außerdem kann ich dir auch Rezepte vorschlagen.
+  utter_out_of_scope:
+  - text: Das kann ich dir nicht beantworten. Ich bin doch ein Koch!
+  - text: Solche Fragen haben in der Küche nichts zu suchen!
+  - text: Dazu weiß ich nichts. Ich bin aufs Kochen spezialisiert
+  utter_please_rephrase:
+  - text: Tut mir Leid, ich habe dich nicht ganz verstanden. Kannst du das bitte wiederholen?
+  utter_placeholder:
+  - text: Soon my daddys will implement something when you ask me that kind of question.
+actions:
+- action_specific_recipe
+- action_meal_of_the_day
+- action_more
+forms: {}
+e2e_actions: []

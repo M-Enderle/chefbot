@@ -1,0 +1,305 @@
+version: "2.0"
+nlu:
+- intent: greeting
+  examples: |
+    - hey
+    - hallo
+    - hi
+    - naa du
+    - guten morgen
+    - guten abend
+    - moin
+    - howdy
+    - servus
+    - grüezi
+    - guten tag
+    - schönen tag
+    - chef
+    - Servus du hund du kleiner pisser du
+    - hello
+    - Hi
+    - Moin Meister
+    - Hello
+    - Hey
+    - Hallo
+    - Moin
+- intent: goodbye
+  examples: |
+    - auf wiedersehen
+    - ciao
+    - ciao kakao
+    - bis später
+    - gute nacht
+    - see you later crocodile
+    - hab nen schönen Tag
+- intent: affirm
+  examples: |
+    - ja
+    - y
+    - indeed
+    - natürlich
+    - hört sich gut an
+    - korrekt
+    - okay
+    - bestätigen
+    - gerne
+    - von mir aus
+    - wenns sein muss
+- intent: deny
+  examples: |
+    - nein
+    - n
+    - niemals
+    - denke nicht
+    - mag ich nicht
+    - nie im leben
+    - nicht wirklich
+    - ne du
+    - heute nicht
+    - nein danke
+- intent: bot_challenge
+  examples: |
+    - Bist du ein Bot?
+    - Bist du ein Mensch?
+    - spreche ich mit einem Bot?
+    - spreche ich mit einem Mensch?
+    - bist du real?
+- intent: help
+  examples: |
+    - Was kannst du?
+    - Was kann ich bei dir tun?
+    - Wie kannst du mir helfen?
+    - Was kann ich sagen?
+    - Wie benutze ich dich?
+    - hilf mir
+    - hilfe
+    - help
+    - -h
+    - ich bin lost
+    - Hilfe
+    - Ich brauche hilfe
+- intent: specific_recipe
+  examples: |
+    - ich möchte [lasagne](meal) kochen
+    - ich möchte [kekse](meal) backen
+    - wie koche ich [zanderfilet](meal)?
+    - wie backe ich [schokoladenkuchen](meal)?
+    - zeige mir rezepte für [muffins](meal)
+    - ich hab Lust auf [pfannkuchen](meal)
+    - heute möchte ich [steak](meal) kochen
+    - heute möchte ich eine [torte](meal) backen
+    - wie kocht man [flammkuchen]
+    - wie mache ich [burger](meal)?- wie backt man [zitronenkuchen](meal)?
+    - rezepte für [curry-reis](meal)
+    - schlage mir die [best bewertesten](sort) rezepte für [chicken-nuggets](meal) vor
+    - zeige mir die [top](sort) rezepte für [pizza](meal)
+    - zeige mir die [neusten](sort) rezepte für [bohnensalat](meal)
+    - schlage mir das [beste](sort) rezept für [salat mit putenfleisch](meal)
+    - ich möchte [einfache](difficulty) [gemüsecremesuppe](meal) kochen
+    - ich möchte einen [normal](difficulty) schwierigen [gemischten salat](meal) zubereiten
+    - ich möchte [pfiffig](difficulty) einen [Schweinsbraten](meal) zubereiten
+    - ich möchte [normal](difficulty) schwieriges [ciabatta](meal) backen
+    - wie mache ich [mittel oder schwere](difficulty) [schokoladenbrot](meal)?- wie backt man [zitronenkuchen](meal)?
+    - welche rezepte für [bratkartoffeln mit quak](meal) sind auf [normaler](difficulty) Schwierigkeitsstufe?
+    - ich möchte einen [vegetarischen](specification) [kalter hund](meal) backen
+    - zeige mir rezepte für [guacamole](meal) aus [deutschland](specification)
+    - ich möchte einen [schweinsbraten](meal) mit viel [gemüse](specification) kochen
+    - zeige mir ein [fettarmes](specification) Rezept für [Pommes](meal)
+    - ich möchte ein [asiatisches](specification) thai curry mit einem [ei](specification) kochen
+    - zeige mir rezepte für [baguette](meal) mit keyword [gluten](specification)
+    - wie mache ich [chili con cane](meal) mit [rind](specification)
+    - zeige mir rezepte für [rinder steak soße](meal) mit stichwort [pilze](specification)
+    - ich brauche ein rezept für [pizza](meal) für eine [party](specification)
+    - gib mir rezepte für [wiener würstchen](meal) mit [kartoffeln](specification)
+    - zeige mir [low-carb](specification) rezepte für [kartoffelsalat](specification)
+    - gib mir vorschläge für [pasta mit tomatensoße](meal) mit stichwort [italienisch](specification)
+    - ich will heute [Schweinefilet auf süßkartoffelpüree](meal) kochen, wenn es weniger als [zwanzig minuten](time) geht
+    - zeig mir rezepte die kürzer als [30 min](time) sind von [Schweinshachse](meal)
+    - ich will [zitronenkuchen](meal) kochen und nicht mehr als eine [halbe stunde](time) brauchen
+    - ich hab nur [45 min](time) und brauche eine [chillipaprikapaste](meal)
+    - ich will morgen für [2](amount_ppl) Personen [Lauchsuppe](meal) mit Nudeln kochen
+    - Ich möchte [Lauchsuppe mit Nudeln](meal) kochen für [5](amount_ppl) Personen
+    - Heute will ich für uns [drei](amount_ppl) eine [Suppe](meal) kochen
+    - Wir sind zu [dritt](amount_ppl) und möchten [vegetarische](specification) [pizza](meal) machen
+    - Ich will schnitzel mit [pommes](meal) kochen
+    - Ich will heute [Reis](meal) für [2](time) personen kochen
+    - Ich will [schnitzel](meal) kochen
+    - ich will mir heute [pfannkuchen mit pilzsuppe](meal) machen, für [2](time) personen
+    - ich will [reis](meal) kochen
+    - ich will [milchreis](meal) kochen
+    - Heute koche ich [kinder](meal) für [4](amount_ppl) personen
+    - ich will heute [pfannkuchen](meal) für [2](amount_ppl) personen kochen
+    - ich will heute [gulasch](meal) kochen
+    - ich will heute [Pommes](meal) machen
+    - ich will heute [Bratkartoffeln](meal) machen
+    - ich will heute [spargel](meal) kochen
+    - ich will heute [nudelauflauf](meal) kochen
+    - ich will heute [Glühwein](meal) kochen aber bitte [vegetarisch](specification)
+    - Ich will heute [Ketchup](meal) machen
+    - ich möchte bitte [gulasch](meal) für [5](amount_ppl) machen
+    - Ich möchte heute [gulasch](meal) machen
+    - ich möchte doch lieber [kartoffelbrei](meal) machen
+    - zeige mir [einfache](difficulty) [Lasagne](meal) rezepte
+    - ich möchte [schwierige](difficulty) [spaghetti](meal) kochen
+    - Ich möchte [Schnitzel](meal) trinken
+    - [vegane](specification) [Lasagne](meal) [schwierig](difficulty)
+    - [vegetarische](specification) [Lasagne](meal)
+    - [Schnitzel](meal)
+    - ich möchte [Schnitzel](meal) essen
+    - Ich möchte [einen](amount_ppl) [Cocktail](meal) trinken
+    - Ich möchte mir [einen](amount_ppl) [Kaffee](meal) selber machen
+    - ich will [nudelauflauf mit kartoffelbrei ](meal)kochen
+    - Ich will [vegane](specification) [Familienpizza](meal) kochen für [32](amount_ppl) pers
+    - Ich will [Lasagne](meal) kochen für [3](amount_ppl)
+    - Ich will [nudelauflauf](meal) kochen
+    - ich will [nudeln](meal) kochen auf [schwierigster](difficulty) Stufe
+    - [schwieriger](difficulty) Stufe[ Schitzel mit Nudelauflauf](meal)
+    - [Schweinsbraten mit Kartoffelsalat](meal) auf der [schwerste](difficulty) Stufe
+    - ich will [schnitzel mit nudelsalat](meal) kochen auf [schwerer](difficulty) Stufe
+    - Heute habe ich Lust auf [ein](amount_ppl) [Zanderfilet mit Kroketten](meal)
+    - [ratatouille mit reis und gemüse](meal) auf stufe [schwer](difficulty)
+    - Ich möchte [schwere](difficulty) [Dampfnudeln mit Vanillesoße](meal) essen
+    - Ich will[ pfannkuchen mit Paprika](meal) kochen auf [schwerster](difficulty) stufe
+    - Ich will [Chicken nuggestets](meal) auf [schwerster](difficulty) Schwierigkeitsstufe kochen
+    - Ich will [Lasagne mit Paprika und Karotten](meal) kochen
+    - Ich will [Schnitzel mit Salat und paprika](meal) kochen
+    - Ich will [apfelsaft](meal) selbst machen
+    - Ich möchte [Spaghetti](meal) kochen
+    - Ich will doch lieber [chips](meal) selbst backen
+    - Okay dann will ich [ketchup](meal) selbst machen
+    - Ich will [schwierige](difficulty) [Lasagne](meal) kochen
+    - ich will [pommes](meal) auf [schwerer](difficulty) schwierigkeitsstufe kochen
+    - Ich möchte [schwere]{"entity": "difficulty", "value": "hard"} [lasagne](meal)
+    - Ich will heute [Lasagne](meal) für [5](amount_ppl) Personen kochen
+    - Ich will für [drei](amount_ppl) personen [Lasagne](meal) kochen
+    - Ich will heute [Lasagne](meal) kochen
+    - ich will [schnitzel mit nudelsalat](meal) kochen
+    - Ich will [Karottensalat](meal) machen
+    - Ich will [Schnitzel](meal) kochen
+    - Ich will geile [Schnitzel](meal) machen
+    - Ich will [schwere]{"entity": "difficulty", "value": "hard"} [zitronenkuchen](meal) backen
+    - Ich will [lasagne](meal) kochen
+    - Ich will [nudeln](meal) essen
+    - Ich will [kuchen](meal) backen
+    - ICH WILL [REIS](meal)
+    - ich will [schwierige](difficulty) [lasagne](meal) kochen
+    - [vegane](specification) [Lasagne](meal)
+    - Ich will [pfannkuchen mit Paprika](meal) kochen
+    - Ich möchte [nudeln](meal) kochen
+    - [nudeln](meal) kochen
+    - [Schitzel mit Nudelauflauf](meal)
+    - welches [Schnitzel](meal) Rezept ist [einfach](difficulty)?
+    - Suche mir ein [einfaches](difficulty) Rezept für [Tomatensalat](meal) heraus
+    - Ich möchte ein [einfacheres](difficulty) Rezept für [Fleischbälle](meal) kochen
+    - Ich möchte [einfachere](difficulty) [Kartoffelknödel](meal) kochen
+    - Gib mir das [einfachste](difficulty) Rezept für [Hähnchencurry](meal)
+    - Sag mir die [einfachsten](difficulty) Rezepte für [Nudeln mit Käse Sahne Soße](meal)
+    - [einfachstes](difficulty) [Kartoffelgratin](meal)
+    - Ich möchte einen [einfachen](difficulty) [Kuchen](meal) backen
+    - ein [einfacher](difficulty) [Burger](meal)
+    - [einfachster](difficulty) [Zwiebelkuchen](meal)
+    - ich will [Szegediner Gulasch mit Kartoffeln](meal) kochen aber bitte [schwer](difficulty)
+    - heute mag ich [vegane](specification) [Frischkäsetorte mit Bröselboden und Blaubeeren](meal) kochen aber bitte [leicht](difficulty)
+    - Ich will [Rosmarin-Balsamico-Schweinefilet](meal) machen auf [schwerer]{"entity": "difficulty", "value": "hard"} Stufe
+    - Ich will [Pommes mit chickennuggets](meal) kochen
+    - Ich will [lasagne](meal) auf der schwierigkeitsstufe [hart](difficulty) kochen
+    - Ich möchte [lasagne](meal) kochen
+    - ich möchte [spaghetti](meal) kochen
+- intent: more
+  examples: |
+    - Weitere Rezepte
+    - Mehr
+    - Andere Rezepte
+    - Weiter
+    - Die nächsten Rezepte
+    - weitere
+    - zeige mir mehr
+    - keins davon
+    - 3 weitere Vorschläge
+    - zeig mehr
+    - Zeige mir mehr
+    - more
+    - mehr
+    - MEHR
+- intent: meal_of_the_day
+  examples: |
+    - Was soll ich heute [kochen](cook)?
+    - Schlage mir vor was ich heute [kochen](cook) könnte
+    - Ich möchte das [Gericht](cook) des Tages wissen
+    - Was kannst du mir heute zum [kochen](cook) empfehlen?
+    - Was ist das [Gericht](cook) das Tages?
+    - Sag mir die [Empfehlung](cook) des Tages
+    - Welches [Gericht](cook) kannst du mir heute empfehlen?
+    - Ich weiß nicht was ich heute [kochen](cook) soll
+    - Mir fällt nichts ein was ich heute [kochen](cook) könnte
+    - Was soll ich heute nur [essen](cook)?
+    - Ich weiß nicht was ich heute [essen](cook) soll
+    - Was kannst du mir heute zum [essen](cook) empfehlen?
+    - ICH WILL [KOCHEN](cook)
+    - ICH WILL [BACKEN](bake)
+    - Was kannst du mir heute zum [backen](bake) empfehlen?
+    - Ich weiß nicht was ich heute [backen](bake) soll
+    - Was soll ich heute nur [backen](bake)
+    - Mir fällt nichts ein was ich heute [backen](bake) könnte
+    - Ich weiß einfach nicht was ich heute [backen](bake) soll
+    - Welches [Gebäck](bake) kannst du mir heute empfehlen?
+    - Sag mir das [Gebäck](bake) des Tages
+    - Was ist der [Kuchen](bake) des Tages?
+    - Ich möchte den [Kuchen](bake) des Tages wissen
+    - ich möchte etwas [backen](bake)
+    - ich will etwas [backen](bake)
+    - was soll ich heute [backen](bake)?
+    - was soll ich heute [essen](cook)?
+    - Ich möchte etwas [backen](bake)
+- intent: out_of_scope
+  examples: |
+    - Ich möchte ein Auto kaufen
+    - Was ist zwei plus zwei?
+    - wie viel wiegt ein elefant?
+    - welches Geräusch macht ein Affe?
+    - womit tötet man am besten menschen?
+    - wann wurde angela merkel geboren
+    - wie groß ist der durchschnittliche Norweger
+    - ich möchte Drogen kaufen
+    - Ich möchte Kinder töten
+    - Wo wachsen Leoparden auf?
+    - Mit wie vielen Frauen hat Obama geschlafen?
+    - ich will kinder töten
+    - Wie viele Hände habe ich?
+    - ich will kinder vergewaltigen
+- intent: nevermind
+  examples: |
+    - ich möchte doch was anderes Kochen
+    - doch nicht
+    - nevermind
+    - Ich habe mich umentschieden
+    - Ich will was anderes
+- intent: nlu_fallback
+  examples: |
+    - jigrofejigojfdio jgifopd sjiopgfjisop gjpdofs
+    - uaisfhisa
+    - uiofdpsajpofjdsa
+    - sjaifpjaiposfjpsoadjfiodspa
+- synonym: hard
+  examples: |
+    - schwere
+    - schwerer
+    - schwer
+    - schwerste
+    - schwieriger
+    - schwierig
+    - schwerster
+    - schwierigster
+    - schwierige
+- synonym: easy
+  examples: |
+    - einfach
+    - einfache
+    - einfaches
+    - einfachstes
+    - einfacher
+    - einfachste
+    - einfachster
+    - einfachsten
+    - einfachen
+    - einfachere

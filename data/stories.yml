@@ -1,0 +1,41 @@
+version: "2.0"
+stories:
+- story: just greeting
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - action: utter_cook
+- story: specific recipe
+  steps:
+  - intent: specific_recipe
+  - action: action_specific_recipe
+  - intent: more
+  - action: action_more
+- story: Meal of the day
+  steps:
+  - intent: meal_of_the_day
+  - action: action_meal_of_the_day
+- story: specific recipe 2
+  steps:
+  - intent: specific_recipe
+  - action: action_specific_recipe
+- story: Meal of the day 2
+  steps:
+  - intent: meal_of_the_day
+  - action: action_meal_of_the_day
+  - intent: more
+  - action: action_more
+- story: specific recipe 3
+  steps:
+  - intent: specific_recipe
+  - action: action_specific_recipe
+  - intent: nevermind
+  - action: utter_cook
+- story: specific recipe 4
+  steps:
+  - intent: specific_recipe
+  - action: action_specific_recipe
+  - intent: more
+  - action: action_more
+  - intent: nevermind
+  - action: utter_cook
